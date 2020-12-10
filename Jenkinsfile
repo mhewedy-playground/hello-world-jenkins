@@ -1,22 +1,10 @@
 pipeline {
-  agent any
-  stages {
-    stage("Build") {
-      steps {
-         echo "Hello world!"
-         writeFile file: 'test-results.txt', text: 'hello world!'
-      }
+    agent any
+    stages {
+        stage('Audit tools') {                        
+            steps {
+                auditTools2 message: 'This is demo 2'
+            }
+        }
     }
-    stage("Test") {
-      steps {
-        sh 'ls -htl'
-        sh 'echo listing all files'
-      }    
-    }
-  }
-  post {
-    success {
-      archiveArtifacts 'test-results.txt'
-    }
-  }
 }
