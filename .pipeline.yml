@@ -1,9 +1,6 @@
 config:
-  project_name: some-rails-project
+  project_name: hello-world-jenkins
   image: alpine
-
-#services:
-#  - mysql 
 
 steps:
   build:
