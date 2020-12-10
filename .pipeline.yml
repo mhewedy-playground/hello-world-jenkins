@@ -1,0 +1,17 @@
+config:
+#  dockerfile: .woloxci/Dockerfile
+  project_name: some-rails-project
+
+services:
+  - mssql
+
+steps:
+  build:
+    - echo "Hello World!"
+    - ls -lt
+  test:
+    - echo "Testing hello World!"
+    - ls -lt
+
+timeout: 600
+
