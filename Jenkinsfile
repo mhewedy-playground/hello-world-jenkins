@@ -6,6 +6,8 @@ pipeline {
          echo "Hello world!"
          writeFile file: 'test-results.txt', text: 'hello world!'
       }
+    }
+    stage("Test") {
       steps {
         sh 'ls -htl'
         sh 'echo listing all files'
