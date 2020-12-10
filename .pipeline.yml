@@ -1,9 +1,9 @@
 config:
-#  dockerfile: .woloxci/Dockerfile
   project_name: some-rails-project
+  image: alpine
 
-services:
-  - mssql
+#services:
+#  - mssql
 
 steps:
   build:
